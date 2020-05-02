@@ -7,11 +7,12 @@ import Button from './Button';
 
 export default {
   title: 'Button',
-  component: Button,
   decorators: [withA11y, withKnobs],
   excludeStories: /.*Data$/,
   parameters: {
-    description: "Buttons are for clicking"
+    componentSubtitle: 'Buttons are for clicking',
+    component: Button,
+    descriptionSlot: 'Use the Primary button or for major action like submitted data or opening a modal.'
   }
 };
 
@@ -23,6 +24,11 @@ export const actionsData = {
   onClick: action('onClick')
 }
 
-export const Primary = () => <Button type='primary' cta='Submit' />
+export const Primary = () => {
+  /**
+  * Some more text can go here
+  */
+  return (<Button type='primary' cta='Get started' />)
+}
 export const Secondary = () => <Button type='secondary' cta='Cancel' />
-export const Link = () => <Button type='link' cta='Privacy Policy' />
+export const Link = () => <Button type='link' cta='Privacy notice' />
