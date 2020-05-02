@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../index.scss';
 
 .ph-button {
   border-radius: 100px;
@@ -19,6 +19,7 @@
   }
 
   &.secondary {
+    border-color: $near-black;
     background-color: $white;
     color: $near-black;
     &:hover, &:active, &:focus {
@@ -36,5 +37,4 @@
       text-decoration: none;
     }
   }
- 
 }

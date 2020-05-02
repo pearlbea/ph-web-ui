@@ -28,7 +28,7 @@ export const Primary = () => {
   /**
   * Some more text can go here
   */
-  return (<Button type='primary' cta='Get started' />)
+  return (<Button type='primary'>Get started</Button>)
 }
-export const Secondary = () => <Button type='secondary' cta='Cancel' />
-export const Link = () => <Button type='link' cta='Privacy notice' />
+export const Secondary = () => <Button type='secondary'>Cancel</Button>
+export const Link = () => <Button type='link'>Privacy notice</Button>

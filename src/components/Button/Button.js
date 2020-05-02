@@ -7,17 +7,38 @@ import './button.scss';
  * the `Secondary` button to close modals, cancel form submissions, and other minor actions. 
  * Use the `Link` button inline. Text for all button types is title case.
  */
-const Button = ({ cta, onClick, type }) => (
-  <button className={`ph-button ${type}`}>{cta}</button>
-);
+const Button = ({ children, onClick, type }) => {
+
+  const formatString = (buttonText) => {
+    if (typeof buttonText === 'string') {
+      const cleanText = buttonText.trim().toLowerCase();
+      return cleanText.charAt(0).toUpperCase() + cleanText.slice(1)
+    }
+    return children;
+  }
+
+  return (
+    <button className={`ph-button ${type}`} onClick={onClick}>{formatString(children)}</button>
+  )
+};
 
 Button.propTypes = {
-  cta: PropTypes.string.isRequired,
+  /**
+   * button text 
+   */
+  children: PropTypes.string,
+  /**
+   * button action
+   */
   onClick: PropTypes.func.isRequired,
+  /**
+   * button style
+   */
   type: PropTypes.oneOf(['primary', 'secondary', 'link'])
 }
 
 Button.defaultProps = {
+  children: 'Submit',
   type: 'primary'
 }
 
