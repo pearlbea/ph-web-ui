@@ -6,7 +6,9 @@ describe('Button', () => {
 
   describe('default', () => {
     const defaultProps = {
-      cta: 'Submit'
+      cta: 'Submit',
+      onClick: jest.fn(),
+      type: 'primary'
     };
 
     const renderComponent = (props) => {
