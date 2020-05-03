@@ -7,7 +7,7 @@ import './button.scss';
  * the `Secondary` button to close modals, cancel form submissions, and other minor actions. 
  * Use the `Link` button inline. Text for all button types is title case.
  */
-const Button = ({ children, onClick, type }) => {
+export const Button = ({ children, onClick, type }) => {
 
   const formatString = (buttonText) => {
     if (typeof buttonText === 'string') {
