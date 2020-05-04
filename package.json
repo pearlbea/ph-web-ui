@@ -4,15 +4,13 @@
   "main": "build/index.js",
   "private": true,
   "dependencies": {
+    "@storybook/addon-a11y": "^5.3.18",
     "node-sass": "^4.14.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^10.1.0",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-docs": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
@@ -20,11 +18,14 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/preset-scss": "^1.0.2",
-    "@storybook/react": "^5.3.18"
+    "@storybook/react": "^5.3.18",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^10.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "start-storybook",
+    "build": "build-storybook",
     "prepare": "yarn run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
